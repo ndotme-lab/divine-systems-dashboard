@@ -65,10 +65,22 @@ st.markdown("""
 # --- Header ---
 st.markdown("<div class='main-title'>🌸 Divine Systems Daily Affirmation</div>", unsafe_allow_html=True)
 
+# --- Choose category ---
+categories = sorted(list(set([a["category"] for a in affirmations])))
+selected_category = st.selectbox("🌸 Choose a category", ["All"] + categories)
+
+# --- Filter affirmations based on category ---
+if selected_category == "All":
+    filtered_affirmations = affirmations
+else:
+    filtered_affirmations = [a for a in affirmations if a["category"] == selected_category]
+
 # --- Generate or show affirmation ---
 if "selected_affirmation" not in st.session_state:
-    st.session_state.selected_affirmation = random.choice(affirmations)
+    st.session_state.selected_affirmation = random.choice(filtered_affirmations)
+
 affirmation = st.session_state.selected_affirmation
+
 
 # --- Display affirmation section ---
 st.markdown("<div class='sub-title'>✨ Today's Affirmation</div>", unsafe_allow_html=True)
