@@ -127,5 +127,3 @@ Please credit **ByThandi** and keep its spirit of creativity and faith intact.
 > *Divine Systems — where code becomes prayer and structure becomes peace.*
 
 ---
-
-Would you like me to format this README with your **brand colours (hex #152d69, #f7931e, #521305)** using emojis or Markdown accents so it visually matches your ByThandi aesthetic before you upload it?
