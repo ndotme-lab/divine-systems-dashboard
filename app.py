@@ -6,14 +6,24 @@ from datetime import datetime
 # --- Page setup ---
 st.set_page_config(page_title="🌸 Divine Systems Daily Affirmation", layout="centered")
 
-# --- Safety check & load affirmations ---
+# --- Safety check & load affirmation bank ---
 st.write("👋 App is running — loading affirmations...")
+
 try:
     with open("affirmation_bank.json", "r", encoding="utf-8") as f:
-        affirmations = json.load(f)
+        data = json.load(f)
+        affirmations = data.get("affirmations", [])
 except Exception as e:
     st.error(f"⚠️ Could not load affirmation_bank.json: {e}")
     affirmations = [{"text": "Affirmation data not loaded.", "category": "Error"}]
+
+# --- Friendly display names (UI only) ---
+CATEGORY_DISPLAY = {
+    "Create": "Create Flow",
+    "Build": "Build Discipline",
+    "Believe": "Believe Again",
+    "Weave": "Weave Wholeness"
+}
 
 # --- Custom CSS ---
 st.markdown("""
@@ -65,29 +75,34 @@ st.markdown("""
 # --- Header ---
 st.markdown("<div class='main-title'>🌸 Divine Systems Daily Affirmation</div>", unsafe_allow_html=True)
 
-# --- Choose category ---
-categories = sorted(list(set([a["category"] for a in affirmations])))
-selected_category = st.selectbox("🌸 Choose a category", ["All"] + categories)
+# --- Category selection ---
+# Build list of categories from the data, ensure unique + sorted
+categories = sorted(list({a["category"] for a in affirmations if "category" in a}))
+display_names = [CATEGORY_DISPLAY[c] for c in categories if c in CATEGORY_DISPLAY]
+selected_display = st.selectbox("🌸 Choose a category", ["All"] + display_names)
 
-# --- Filter affirmations based on category ---
-if selected_category == "All":
+# --- Map display name back to internal category ---
+if selected_display == "All":
     filtered_affirmations = affirmations
 else:
-    filtered_affirmations = [a for a in affirmations if a["category"] == selected_category]
+    # Find internal category key that matches display name
+    internal_category = [k for k, v in CATEGORY_DISPLAY.items() if v == selected_display][0]
+    filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
 
-# --- Generate or show affirmation ---
+# --- Choose an affirmation (stored in session so it persists until refreshed) ---
 if "selected_affirmation" not in st.session_state:
     st.session_state.selected_affirmation = random.choice(filtered_affirmations)
 
 affirmation = st.session_state.selected_affirmation
 
-
 # --- Display affirmation section ---
 st.markdown("<div class='sub-title'>✨ Today's Affirmation</div>", unsafe_allow_html=True)
 st.markdown(f"<div class='affirmation-box'>📖 {affirmation['text']}</div>", unsafe_allow_html=True)
-st.write(f"🏷️ **Category:** {affirmation.get('category', 'General')}")
 
-# --- Reflection section ---
+display_category = CATEGORY_DISPLAY.get(affirmation["category"], affirmation["category"])
+st.write(f"🏷️ **Category:** {display_category}")
+
+# --- Reflection / Alignment section ---
 st.markdown("<div class='alignment-subtitle'>How aligned do you feel today?</div>", unsafe_allow_html=True)
 alignment = st.radio("", ["Aligned 🌿", "Integrating 🌸", "Unaligned 🌧️"])
 reflection = st.text_area("🪶 Reflection (optional):")
@@ -110,4 +125,3 @@ if st.button("💾 Save & Get New Affirmation"):
 
 st.markdown("---")
 st.caption("🌸 Powered by ByThandi • Divine Systems v3")
-
