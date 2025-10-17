@@ -25,6 +25,9 @@ CATEGORY_DISPLAY = {
     "Weave": "Weave Wholeness"
 }
 
+# --- Filter affirmations to 4 canon categories only ---
+affirmations = [a for a in affirmations if a.get("category") in CATEGORY_DISPLAY.keys()]
+
 # --- Custom CSS ---
 st.markdown("""
     <style>
@@ -75,41 +78,21 @@ st.markdown("""
 # --- Header ---
 st.markdown("<div class='main-title'>🌸 Divine Systems Daily Affirmation</div>", unsafe_allow_html=True)
 
-# --- Category selection (use only the 4 canon categories) ---
-CATEGORY_DISPLAY = {
-    "Create": "Create Flow",
-    "Build": "Build Discipline",
-    "Believe": "Believe Again",
-    "Weave": "Weave Wholeness"
-}
-
-# Order matters for presentation
-canon_order = ["All", "Create", "Build", "Believe", "Weave"]
-
-# Map canon → display name, including "All"
-display_options = ["All"] + [CATEGORY_DISPLAY[c] for c in canon_order if c != "All"]
-
+# --- Category selection ---
+display_options = ["All"] + list(CATEGORY_DISPLAY.values())
 selected_display = st.selectbox("🌸 Choose a category", display_options)
 
-# Convert display name back to internal category
+# Convert back to internal category name
 if selected_display == "All":
     filtered_affirmations = affirmations
 else:
     internal_category = next(k for k, v in CATEGORY_DISPLAY.items() if v == selected_display)
     filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
 
-# --- Map display name back to internal category ---
-if selected_display == "All":
-    filtered_affirmations = affirmations
-else:
-    # Find internal category key that matches display name
-    internal_category = [k for k, v in CATEGORY_DISPLAY.items() if v == selected_display][0]
-    filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
-
+# --- Choose an affirmation (avoid repeating the same one twice) ---
 if "last_affirmation_id" not in st.session_state:
     st.session_state.last_affirmation_id = None
 
-# Pick a random affirmation that isn’t the same as the last one
 new_affirmation = random.choice(filtered_affirmations)
 while (
     st.session_state.last_affirmation_id is not None
@@ -121,8 +104,6 @@ while (
 st.session_state.selected_affirmation = new_affirmation
 st.session_state.last_affirmation_id = new_affirmation["id"]
 affirmation = new_affirmation
-
-affirmation = st.session_state.selected_affirmation
 
 # --- Display affirmation section ---
 st.markdown("<div class='sub-title'>✨ Today's Affirmation</div>", unsafe_allow_html=True)
