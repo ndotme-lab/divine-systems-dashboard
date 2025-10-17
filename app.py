@@ -131,9 +131,30 @@ display_category = CATEGORY_DISPLAY.get(affirmation["category"], affirmation["ca
 st.write(f"🏷️ **Category:** {display_category}")
 
 # --- Reflection / Alignment section ---
-st.markdown("<div class='alignment-subtitle'>How aligned do you feel today?</div>", unsafe_allow_html=True)
-alignment = st.radio("", ["Aligned 🌿", "Integrating 🌸", "Unaligned 🌧️"])
-reflection = st.text_area("🪶 Reflection (optional):")
+st.markdown("""
+<div style="
+    background-color: #ffcb8f20;
+    border: 2px solid #ffcb8f;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+">
+<h3 style='color:#152d69; text-align:center; margin-bottom:10px;'>💫 How aligned do you feel today?</h3>
+""", unsafe_allow_html=True)
+
+# Alignment selection
+alignment = st.radio(
+    "",
+    ["Aligned 🌿", "Integrating 🌸", "Unaligned 🌧️"],
+    horizontal=False,
+)
+
+# Reflection input
+reflection = st.text_area("🪶 Reflection (optional):", placeholder="Write your thoughts here...")
+
+st.markdown("</div>", unsafe_allow_html=True)
+
 
 # --- Save and refresh ---
 if st.button("💾 Save & Get New Affirmation"):
