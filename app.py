@@ -75,11 +75,28 @@ st.markdown("""
 # --- Header ---
 st.markdown("<div class='main-title'>🌸 Divine Systems Daily Affirmation</div>", unsafe_allow_html=True)
 
-# --- Category selection ---
-# Build list of categories from the data, ensure unique + sorted
-categories = sorted(list({a["category"] for a in affirmations if "category" in a}))
-display_names = [CATEGORY_DISPLAY[c] for c in categories if c in CATEGORY_DISPLAY]
-selected_display = st.selectbox("🌸 Choose a category", ["All"] + display_names)
+# --- Category selection (use only the 4 canon categories) ---
+CATEGORY_DISPLAY = {
+    "Create": "Create Flow",
+    "Build": "Build Discipline",
+    "Believe": "Believe Again",
+    "Weave": "Weave Wholeness"
+}
+
+# Order matters for presentation
+canon_order = ["All", "Create", "Build", "Believe", "Weave"]
+
+# Map canon → display name, including "All"
+display_options = ["All"] + [CATEGORY_DISPLAY[c] for c in canon_order if c != "All"]
+
+selected_display = st.selectbox("🌸 Choose a category", display_options)
+
+# Convert display name back to internal category
+if selected_display == "All":
+    filtered_affirmations = affirmations
+else:
+    internal_category = next(k for k, v in CATEGORY_DISPLAY.items() if v == selected_display)
+    filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
 
 # --- Map display name back to internal category ---
 if selected_display == "All":
