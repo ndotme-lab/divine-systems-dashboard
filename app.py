@@ -189,4 +189,5 @@ with col2:
     )
 
 st.markdown("---")
-st.caption("🌸 Powered by ByThandi • Divine Systems v3")
+st.write("🧩 Current build: v3.1 (session download update)")
+
