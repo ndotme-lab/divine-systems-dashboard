@@ -260,4 +260,5 @@ else:
     st.info("💡 Save at least one affirmation to enable PDF download.")
 
 st.markdown("---")
-st.write("🧩 Current build: v3.4 (Multiple PDF download added)")
+st.write("🌸 ByThandi Divine Systems — v3.4 “Harvest Notes Edition”")
+
