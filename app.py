@@ -78,16 +78,34 @@ st.markdown("""
 # --- Header ---
 st.markdown("<div class='main-title'>🌸 Divine Systems Daily Affirmation</div>", unsafe_allow_html=True)
 
-# --- Category selection ---
-display_options = ["All"] + list(CATEGORY_DISPLAY.values())
-selected_display = st.selectbox("🌸 Choose a category", display_options)
+# --- Category selection (Divine Systems v2 clean bank) ---
 
-# Convert back to internal category name
+# Canonical categories and display names
+CATEGORY_DISPLAY = {
+    "Create": "Create Flow",
+    "Build": "Build Discipline",
+    "Believe": "Believe Again",
+    "Weave": "Weave Wholeness"
+}
+
+# Only keep affirmations that match the 4 core categories
+affirmations = [a for a in affirmations if a.get("category") in CATEGORY_DISPLAY.keys()]
+
+# Dropdown display options
+display_options = ["All"] + list(CATEGORY_DISPLAY.values())
+
+# Display the category selector
+selected_display = st.selectbox("🌸 Explore a Pillar of Truth", display_options, index=0)
+
+# Filter affirmations by selection
 if selected_display == "All":
     filtered_affirmations = affirmations
 else:
     internal_category = next(k for k, v in CATEGORY_DISPLAY.items() if v == selected_display)
     filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
+
+# Optional divider for clarity
+st.markdown("---")
 
 # --- Choose an affirmation (avoid repeating the same one twice) ---
 if "last_affirmation_id" not in st.session_state:
