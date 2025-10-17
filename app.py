@@ -2,6 +2,9 @@ import streamlit as st
 import random
 import json
 from datetime import datetime
+from io import BytesIO
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 # --- Page setup ---
 st.set_page_config(page_title="🌸 Divine Systems Daily Affirmation", layout="centered")
@@ -65,49 +68,25 @@ st.markdown("""
             font-size: 1.2rem;
             line-height: 1.6;
         }
-        .alignment-subtitle {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #152d69;
-            text-align: center;
-            margin-top: 1.2rem;
-        }
     </style>
 """, unsafe_allow_html=True)
 
 # --- Header ---
 st.markdown("<div class='main-title'>🌸 Divine Systems Daily Affirmation</div>", unsafe_allow_html=True)
 
-# --- Category selection (Divine Systems v2 clean bank) ---
-
-# Canonical categories and display names
-CATEGORY_DISPLAY = {
-    "Create": "Create Flow",
-    "Build": "Build Discipline",
-    "Believe": "Believe Again",
-    "Weave": "Weave Wholeness"
-}
-
-# Only keep affirmations that match the 4 core categories
-affirmations = [a for a in affirmations if a.get("category") in CATEGORY_DISPLAY.keys()]
-
-# Dropdown display options
+# --- Category selection ---
 display_options = ["All"] + list(CATEGORY_DISPLAY.values())
-
-# Display the category selector
 selected_display = st.selectbox("🌸 Explore a Pillar of Truth", display_options, index=0)
 
-# Filter affirmations by selection
 if selected_display == "All":
     filtered_affirmations = affirmations
 else:
     internal_category = next(k for k, v in CATEGORY_DISPLAY.items() if v == selected_display)
     filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
 
-# Optional divider for clarity
 st.markdown("---")
 
-# --- Choose an affirmation (avoid repeating the same one twice) ---
+# --- Choose an affirmation ---
 if "last_affirmation_id" not in st.session_state:
     st.session_state.last_affirmation_id = None
 
@@ -177,44 +156,61 @@ if st.button("💾 Save & Get New Affirmation"):
     st.success("🗂️ Saved to your affirmation log.")
     st.session_state.selected_affirmation = random.choice(affirmations)
     st.rerun()
-    
-# --- Optional: Download current session ---
+
+# --- PDF generation helper ---
+def create_session_pdf(affirmation, category, alignment, reflection):
+    buffer = BytesIO()
+    c = canvas.Canvas(buffer, pagesize=letter)
+    width, height = letter
+
+    y = height - 80
+    c.setFont("Helvetica-Bold", 16)
+    c.drawString(72, y, "🌸 Divine Systems Daily Affirmation Session")
+    y -= 40
+
+    c.setFont("Helvetica", 12)
+    c.drawString(72, y, "✨ Today's Affirmation:")
+    y -= 25
+    text = c.beginText(72, y)
+    text.setFont("Helvetica-Oblique", 12)
+    text.textLines(affirmation)
+    c.drawText(text)
+
+    y -= 60
+    c.setFont("Helvetica", 12)
+    c.drawString(72, y, f"🏷️ Category: {category}")
+
+    y -= 25
+    c.drawString(72, y, f"🌿 Alignment: {alignment}")
+
+    y -= 40
+    c.drawString(72, y, "🪶 Reflection:")
+    y -= 20
+    text = c.beginText(72, y)
+    text.setFont("Helvetica", 11)
+    text.textLines(reflection if reflection else "—")
+    c.drawText(text)
+
+    c.showPage()
+    c.save()
+    buffer.seek(0)
+    return buffer
+
+# --- Optional: Download current session as PDF ---
 st.markdown("### 💾 Optional: Download your session")
-
-session_data = {
-    "affirmation": affirmation["text"],
-    "category": CATEGORY_DISPLAY.get(affirmation["category"], affirmation["category"]),
-    "alignment": alignment,
-    "reflection": reflection,
-    "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-}
-
-session_json = json.dumps(session_data, ensure_ascii=False, indent=2)
-session_text = (
-    f"🌸 Divine Systems Affirmation Session\n"
-    f"Date: {session_data['date']}\n\n"
-    f"📖 Affirmation: {session_data['affirmation']}\n"
-    f"🏷️ Category: {session_data['category']}\n"
-    f"🌿 Alignment: {session_data['alignment']}\n\n"
-    f"🪶 Reflection:\n{session_data['reflection'] or '(No reflection entered)'}\n"
+pdf_buffer = create_session_pdf(
+    affirmation["text"],
+    display_category,
+    alignment,
+    reflection
 )
 
-col1, col2 = st.columns(2)
-with col1:
-    st.download_button(
-        label="⬇️ Download Session (.txt)",
-        data=session_text,
-        file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
-        mime="text/plain"
-    )
-with col2:
-    st.download_button(
-        label="⬇️ Download Session (.json)",
-        data=session_json,
-        file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
-        mime="application/json"
-    )
+st.download_button(
+    label="📄 Download Session (.pdf)",
+    data=pdf_buffer,
+    file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+    mime="application/pdf"
+)
 
 st.markdown("---")
-st.write("🧩 Current build: (v3.2 visual refinement)")
-
+st.write("🧩 Current build: v3.3 (PDF download added)")
