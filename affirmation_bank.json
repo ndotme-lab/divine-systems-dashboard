@@ -1,28 +1,2236 @@
-[
-  {"text": "I trust the process, even when I can't see the outcome.", "category": "Faith"},
-  {"text": "My creativity flows in divine alignment.", "category": "Purpose"},
-  {"text": "I am supported by systems of grace and wisdom.", "category": "Gratitude"},
-  {"text": "I walk in divine timing and gentle confidence.", "category": "Peace"},
-  {"text": "I build with intention, not pressure.", "category": "Discipline"},
-  {"text": "My divine systems grow at the pace of grace.", "category": "Patience"},
-  {"text": "I am guided to the right ideas, people, and timing.", "category": "Guidance"},
-  {"text": "Every bug I fix strengthens my creative faith.", "category": "Growth"},
-  {"text": "My work flows with the rhythm of divine order.", "category": "Alignment"},
-  {"text": "I am becoming fluent in the language of possibility.", "category": "Vision"},
-
-  {"text": "My creativity is not rushed; it flows in divine rhythm.", "category": "Create"},
-  {"text": "I honour my creative seasons — rest is part of the masterpiece.", "category": "Create"},
-  {"text": "Every idea I birth is an echo of divine inspiration.", "category": "Create"},
-
-  {"text": "I build systems that serve my purpose and peace.", "category": "Build"},
-  {"text": "Consistency is my quiet superpower.", "category": "Build"},
-  {"text": "I am constructing a life that aligns with heaven’s blueprint.", "category": "Build"},
-
-  {"text": "I am who God says I am — capable, creative, and chosen.", "category": "Believe"},
-  {"text": "I move by faith, not by the illusion of delay.", "category": "Believe"},
-  {"text": "My trust in divine timing releases all anxiety about outcomes.", "category": "Believe"},
-
-  {"text": "I weave my gifts into communities of light and impact.", "category": "Weave"},
-  {"text": "Every connection I make is a thread of divine purpose.", "category": "Weave"},
-  {"text": "I am part of a greater pattern unfolding with love.", "category": "Weave"}
-]
+{
+  "affirmations": [
+    {
+      "id": 1,
+      "text": "I trust the process, even when I can't see the outcome.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 2,
+      "text": "My creativity flows in divine alignment.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 3,
+      "text": "I am supported by systems of grace and wisdom.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 4,
+      "text": "I walk in divine timing and gentle confidence.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 5,
+      "text": "I build with intention, not pressure.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 6,
+      "text": "My divine systems grow at the pace of grace.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 7,
+      "text": "I am guided to the right ideas, people, and timing.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 8,
+      "text": "Every bug I fix strengthens my creative faith.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 9,
+      "text": "My work flows with the rhythm of divine order.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 10,
+      "text": "I am becoming fluent in the language of possibility.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 11,
+      "text": "My creativity is not rushed; it flows in divine rhythm.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 12,
+      "text": "I honour my creative seasons — rest is part of the masterpiece.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 13,
+      "text": "Every idea I birth is an echo of divine inspiration.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 14,
+      "text": "I build systems that serve my purpose and peace.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 15,
+      "text": "Consistency is my quiet superpower.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 16,
+      "text": "I am constructing a life that aligns with heaven's blueprint.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 17,
+      "text": "I am who God says I am — capable, creative, and chosen.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 18,
+      "text": "I move by faith, not by the illusion of delay.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 19,
+      "text": "My trust in divine timing releases all anxiety about outcomes.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 20,
+      "text": "I weave my gifts into communities of light and impact.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 21,
+      "text": "Every connection I make is a thread of divine purpose.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 22,
+      "text": "I am part of a greater pattern unfolding with love.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 23,
+      "text": "I am healing at the pace that is right for my soul.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 24,
+      "text": "My scars are proof of my healing, not my brokenness.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 25,
+      "text": "Healing happens in layers, and I honor each one.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 26,
+      "text": "I am gentle with myself as I heal old wounds.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 27,
+      "text": "Every day brings new opportunities for healing.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 28,
+      "text": "My healing journey is sacred and deserves my compassion.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 29,
+      "text": "Healing is not linear, and I honor my unique path.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 30,
+      "text": "I am healing generational wounds with every choice I make.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 31,
+      "text": "I have the courage to show up as myself, fully and unapologetically.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 32,
+      "text": "I am brave enough to begin before I feel ready.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 33,
+      "text": "I am courageous in the face of uncertainty.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 34,
+      "text": "Every act of courage builds my confidence.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 35,
+      "text": "I have the courage to set boundaries that protect my peace.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 36,
+      "text": "I am courageous enough to be vulnerable.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 37,
+      "text": "I have the courage to walk away from what dims my light.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 38,
+      "text": "I am brave enough to ask for what I need.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 39,
+      "text": "I have the courage to start over as many times as I need.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 40,
+      "text": "I am worthy of all the good that comes to me.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 41,
+      "text": "My voice matters and deserves to be heard.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 42,
+      "text": "I am enough, doing enough, having enough.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 43,
+      "text": "I celebrate progress, no matter how small.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 44,
+      "text": "I am worthy of investing in myself and my dreams.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 45,
+      "text": "My worth is not determined by my productivity.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 46,
+      "text": "I am worthy of rest and rejuvenation.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 47,
+      "text": "I am worthy of taking up space.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 48,
+      "text": "I am worthy of celebrating my achievements.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 49,
+      "text": "I am worthy of success and fulfillment.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 50,
+      "text": "Peace is my natural state, and I return to it easily.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 51,
+      "text": "I choose peace over perfection.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 52,
+      "text": "Peace lives within me, no matter what storms surround me.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 53,
+      "text": "I find peace in the present moment.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 54,
+      "text": "Peace is my response to chaos.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 55,
+      "text": "I choose peace over proving myself right.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 56,
+      "text": "Peace anchors me when everything feels uncertain.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 57,
+      "text": "I cultivate peace through my thoughts and actions.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 58,
+      "text": "Every step I take is guided by wisdom and grace.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 59,
+      "text": "I trust myself to make decisions that honor my path.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 60,
+      "text": "My energy is a precious resource, and I protect it wisely.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 61,
+      "text": "I am discovering wisdom within myself that I didn't know I had.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 62,
+      "text": "Wisdom whispers to me in moments of stillness.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 63,
+      "text": "Wisdom flows through me when I quiet my mind.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 64,
+      "text": "I trust myself to navigate this season of my life.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 65,
+      "text": "Wisdom arrives when I'm willing to sit with the questions.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 66,
+      "text": "Wisdom teaches me when to hold on and when to let go.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 67,
+      "text": "My purpose is unfolding perfectly, one day at a time.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 68,
+      "text": "My story is unfolding exactly as it should.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 69,
+      "text": "I am creating something meaningful with my life.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 70,
+      "text": "My purpose doesn't need to be grand to be meaningful.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 71,
+      "text": "My life's purpose is unfolding in perfect divine order.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 72,
+      "text": "My purpose serves something greater than myself.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 73,
+      "text": "My purpose is clear when I follow my joy.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 74,
+      "text": "I am living my purpose by being authentic.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 75,
+      "text": "I am aligned with my highest good and deepest truth.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 76,
+      "text": "I am a magnet for opportunities that align with my values.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 77,
+      "text": "I am aligned with my soul's purpose.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 78,
+      "text": "I am aligned with the rhythm of life.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 79,
+      "text": "My life is in alignment with my deepest values.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 80,
+      "text": "My choices align with who I am becoming.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 81,
+      "text": "I release what no longer serves my highest purpose.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 82,
+      "text": "Every day I am renewed in body, mind, and spirit.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 83,
+      "text": "Every ending is making space for a new beginning.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 84,
+      "text": "I am being renewed from the inside out.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 85,
+      "text": "Renewal is happening in every cell of my being.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 86,
+      "text": "I am being renewed in ways I cannot yet see.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 87,
+      "text": "I am being renewed with every breath I take.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 88,
+      "text": "Abundance flows to me from expected and unexpected sources.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 89,
+      "text": "I am aligned with the flow of abundance.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 90,
+      "text": "My life is abundant in ways that money cannot measure.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 91,
+      "text": "Abundance is my birthright, and I claim it now.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 92,
+      "text": "I attract abundance by being grateful for what I have.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 93,
+      "text": "My life is abundant with beauty, connection, and meaning.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 94,
+      "text": "Abundance expands when I share freely from my gifts.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 95,
+      "text": "I am open to receiving abundance in unexpected ways.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 96,
+      "text": "I am loved beyond measure, exactly as I am.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 97,
+      "text": "My heart is open to receiving love in all its forms.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 98,
+      "text": "Love flows through me and touches everyone I meet.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 99,
+      "text": "I choose to see myself through the eyes of love.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 100,
+      "text": "Love is the foundation of everything I create.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 101,
+      "text": "I am worthy of love that feels safe and easy.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 102,
+      "text": "I am a vessel for divine love to flow through.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 103,
+      "text": "I am loved for who I am, not what I do.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 104,
+      "text": "My faith grows stronger with each challenge I face.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 105,
+      "text": "Divine guidance speaks to me in whispers and signs.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 106,
+      "text": "I trust the universe to catch me when I leap.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 107,
+      "text": "I trust my intuition to guide me forward.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 108,
+      "text": "I release the need to control outcomes.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 109,
+      "text": "I trust that I am exactly where I need to be.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 110,
+      "text": "My faith reminds me that I am never alone.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 111,
+      "text": "My faith is stronger than my fear.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 112,
+      "text": "My faith grows when I surrender what I cannot control.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 113,
+      "text": "Faith reminds me that miracles are possible.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 114,
+      "text": "I give myself permission to rest without guilt.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 115,
+      "text": "Good things are coming to me in divine timing.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 116,
+      "text": "I am patient with myself as I learn and grow.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 117,
+      "text": "Patience is teaching me to appreciate the journey.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 118,
+      "text": "I am learning to trust my own timing.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 119,
+      "text": "Patience teaches me that waiting is not wasting.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 120,
+      "text": "Patience is revealing the deeper lesson in this experience.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 121,
+      "text": "Patience is teaching me to appreciate small miracles.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 122,
+      "text": "My creativity flows from a source beyond my understanding.",
+      "category": "Create",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 123,
+      "text": "My imagination is a gift that connects me to infinite possibilities.",
+      "category": "Create",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 124,
+      "text": "My creative expression is a form of prayer.",
+      "category": "Create",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 125,
+      "text": "My creativity is not dependent on external validation.",
+      "category": "Create",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 126,
+      "text": "I create from a place of overflow, not emptiness.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 127,
+      "text": "My creative gifts are needed in this world.",
+      "category": "Create",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 128,
+      "text": "My creativity is a bridge between the seen and unseen.",
+      "category": "Create",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 129,
+      "text": "I create without the need for permission.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 130,
+      "text": "I create from a place of love, not fear.",
+      "category": "Create",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 131,
+      "text": "I am capable of learning what I don't yet know.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 132,
+      "text": "Every challenge I face is shaping me into a stronger person.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 133,
+      "text": "I don't need to have all the answers today.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 134,
+      "text": "Progress is progress, no matter how small it looks today.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 135,
+      "text": "I have the creativity and determination to figure things out.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 136,
+      "text": "Uncertainty is part of the process, not a sign I'm doing something wrong.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 137,
+      "text": "I am exactly where I need to be right now.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 138,
+      "text": "My authenticity is my greatest asset.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 139,
+      "text": "What makes me different makes me valuable.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 140,
+      "text": "I am building something meaningful, at my own pace.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 141,
+      "text": "My energy and effort are investments in my future self.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 142,
+      "text": "I am building something that will grow beyond what I can see today.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 143,
+      "text": "Every hour I invest is building my foundation, even when I can't see it yet.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 144,
+      "text": "My effort matters, even without immediate results.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 145,
+      "text": "Success doesn't have to be hard to be real.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 146,
+      "text": "I trust myself to figure it out as I go.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 147,
+      "text": "Small consistent actions create extraordinary results.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 148,
+      "text": "I am building a legacy with every choice I make.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 149,
+      "text": "My foundation is strong, even when progress feels slow.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 150,
+      "text": "I build with patience, knowing that great things take time.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 151,
+      "text": "Every small step forward is building momentum.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 152,
+      "text": "I am constructing a life that reflects my values.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 153,
+      "text": "I build with intention and purpose, not perfection.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 154,
+      "text": "My daily actions are building the future I desire.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 155,
+      "text": "I attract the right audience by being myself.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 156,
+      "text": "My story is part of my brand's strength.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 157,
+      "text": "I don't need to be for everyone to be valuable to someone.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 158,
+      "text": "Showing up as myself is enough.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 159,
+      "text": "I am building community one authentic connection at a time.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 160,
+      "text": "My presence adds value to every space I enter.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 161,
+      "text": "I create meaningful connections through authenticity.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 162,
+      "text": "I am a bridge between people, ideas, and possibilities.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 163,
+      "text": "Divine order is orchestrating everything in my favor.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 164,
+      "text": "I am being led to the right opportunities at the right time.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 165,
+      "text": "The path reveals itself as I take each step.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 166,
+      "text": "I am divinely supported in all that I do.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 167,
+      "text": "Signs and synchronicities guide me forward.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 168,
+      "text": "I am open to divine guidance in all its forms.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 169,
+      "text": "The answers I seek are already within me.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 170,
+      "text": "I am led by love, not by fear.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 171,
+      "text": "I see possibilities where others see obstacles.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 172,
+      "text": "My vision is clear and my path is unfolding.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 173,
+      "text": "I hold a vision for my life that excites and inspires me.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 174,
+      "text": "I can see the bigger picture even in small moments.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 175,
+      "text": "My vision pulls me forward with hope and purpose.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 176,
+      "text": "I trust the vision I hold for my life.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 177,
+      "text": "My vision is divinely inspired and uniquely mine.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 178,
+      "text": "I am grateful for the lessons hidden in challenges.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 179,
+      "text": "Gratitude opens the door to more blessings.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 180,
+      "text": "I am thankful for how far I've come.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 181,
+      "text": "Every breath is a gift I do not take for granted.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 182,
+      "text": "I find beauty in ordinary moments.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 183,
+      "text": "Gratitude shifts my perspective from lack to abundance.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 184,
+      "text": "I am grateful for the people who support my journey.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 185,
+      "text": "My life is full of small miracles when I pay attention.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 186,
+      "text": "I show up for myself even when it's hard.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 187,
+      "text": "Discipline is my bridge between dreams and reality.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 188,
+      "text": "I honor my commitments to myself first.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 189,
+      "text": "I choose what serves my highest good, even when it's not easy.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 190,
+      "text": "My discipline is fueled by love, not punishment.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 191,
+      "text": "I am consistent in the small things that create big change.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 192,
+      "text": "I follow through because I trust my future self will thank me.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 193,
+      "text": "My dedication to growth is unwavering.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 194,
+      "text": "I am capable of wearing all the hats right now.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 195,
+      "text": "Solo doesn't mean alone — I can build community.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 196,
+      "text": "I celebrate small wins because they lead to big momentum.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 197,
+      "text": "I am building both a business and a lifestyle.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 198,
+      "text": "Today, I choose progress over perfection.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 199,
+      "text": "I am taking action despite the uncertainty.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 200,
+      "text": "Every post, every conversation, every connection counts.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 201,
+      "text": "I am building my audience one person at a time.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 202,
+      "text": "My consistency today creates my opportunities tomorrow.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 203,
+      "text": "I trust the timing of my breakthrough.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 204,
+      "text": "I am planting seeds today that will bloom in their season.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 205,
+      "text": "My work has value even before it's seen by the world.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 206,
+      "text": "I am learning to trust the invisible progress.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 207,
+      "text": "Every no brings me closer to the right yes.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 208,
+      "text": "I release comparison and embrace my unique journey.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 209,
+      "text": "My timeline is not behind — it is divinely appointed.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 210,
+      "text": "I am building something that will outlast me.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 211,
+      "text": "My ideas are seeds of future abundance.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 212,
+      "text": "I am co-creating with the divine.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 213,
+      "text": "The universe supports my highest vision.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 214,
+      "text": "I am worthy of the vision I carry.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 215,
+      "text": "My gifts are meant to be shared, not hidden.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 216,
+      "text": "I step forward with faith, not fear.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 217,
+      "text": "I am safe to be fully seen.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 218,
+      "text": "My vulnerability is my superpower.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 219,
+      "text": "I honor the seasons of rest and the seasons of action.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 220,
+      "text": "I trust my body's wisdom to guide my energy.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 221,
+      "text": "I am learning to listen before I leap.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 222,
+      "text": "My inner knowing is a reliable compass.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 223,
+      "text": "I release the pressure to have it all figured out.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 224,
+      "text": "I am allowed to evolve and change direction.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 225,
+      "text": "My past does not define my future.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 226,
+      "text": "I forgive myself for not knowing what I hadn't learned yet.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 227,
+      "text": "I am writing a new story with every choice I make.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 228,
+      "text": "My voice carries weight and wisdom.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 229,
+      "text": "I speak with clarity and compassion.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 230,
+      "text": "I am becoming the person I needed when I was younger.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 231,
+      "text": "My presence is a gift to those around me.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 232,
+      "text": "I hold space for others without losing myself.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 233,
+      "text": "I am a student and a teacher on this journey.",
+      "category": "Build",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 234,
+      "text": "I give myself grace for being human.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 235,
+      "text": "I am allowed to rest before I am exhausted.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 236,
+      "text": "My worthiness is not earned — it is inherent.",
+      "category": "Believe",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 237,
+      "text": "I am rooted in purpose and reaching toward possibility.",
+      "category": "Build",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 238,
+      "text": "I welcome divine downloads and inspired ideas.",
+      "category": "Create",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 239,
+      "text": "I am a channel for creativity and innovation.",
+      "category": "Create",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 240,
+      "text": "My work is worship.",
+      "category": "Believe",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 241,
+      "text": "I build with joy, not just obligation.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 242,
+      "text": "I am allowed to enjoy the process, not just the outcome.",
+      "category": "Weave",
+      "alignment": "Aligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 6
+    },
+    {
+      "id": 243,
+      "text": "I trust my creative impulses.",
+      "category": "Create",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 5
+    },
+    {
+      "id": 244,
+      "text": "I am becoming more myself every day.",
+      "category": "Build",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    },
+    {
+      "id": 245,
+      "text": "I release the need to prove myself.",
+      "category": "Weave",
+      "alignment": "Integrating",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 7
+    },
+    {
+      "id": 246,
+      "text": "My value is not determined by productivity.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 3
+    },
+    {
+      "id": 247,
+      "text": "I am held by something greater than myself.",
+      "category": "Believe",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 4
+    },
+    {
+      "id": 248,
+      "text": "Divine Systems flow through me with ease.",
+      "category": "Weave",
+      "alignment": "Unaligned",
+      "tags": [],
+      "reflection": "",
+      "review_interval_days": 2
+    }
+  ]
+}
