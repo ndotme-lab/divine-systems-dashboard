@@ -150,6 +150,43 @@ if st.button("💾 Save & Get New Affirmation"):
     st.success("🗂️ Saved to your affirmation log.")
     st.session_state.selected_affirmation = random.choice(affirmations)
     st.rerun()
+    
+# --- Optional: Download current session ---
+st.markdown("### 💾 Optional: Download your session")
+
+session_data = {
+    "affirmation": affirmation["text"],
+    "category": CATEGORY_DISPLAY.get(affirmation["category"], affirmation["category"]),
+    "alignment": alignment,
+    "reflection": reflection,
+    "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+}
+
+session_json = json.dumps(session_data, ensure_ascii=False, indent=2)
+session_text = (
+    f"🌸 Divine Systems Affirmation Session\n"
+    f"Date: {session_data['date']}\n\n"
+    f"📖 Affirmation: {session_data['affirmation']}\n"
+    f"🏷️ Category: {session_data['category']}\n"
+    f"🌿 Alignment: {session_data['alignment']}\n\n"
+    f"🪶 Reflection:\n{session_data['reflection'] or '(No reflection entered)'}\n"
+)
+
+col1, col2 = st.columns(2)
+with col1:
+    st.download_button(
+        label="⬇️ Download Session (.txt)",
+        data=session_text,
+        file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+        mime="text/plain"
+    )
+with col2:
+    st.download_button(
+        label="⬇️ Download Session (.json)",
+        data=session_json,
+        file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json",
+        mime="application/json"
+    )
 
 st.markdown("---")
 st.caption("🌸 Powered by ByThandi • Divine Systems v3")
