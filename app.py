@@ -89,9 +89,21 @@ else:
     internal_category = [k for k, v in CATEGORY_DISPLAY.items() if v == selected_display][0]
     filtered_affirmations = [a for a in affirmations if a["category"] == internal_category]
 
-# --- Choose an affirmation (stored in session so it persists until refreshed) ---
-if "selected_affirmation" not in st.session_state:
-    st.session_state.selected_affirmation = random.choice(filtered_affirmations)
+if "last_affirmation_id" not in st.session_state:
+    st.session_state.last_affirmation_id = None
+
+# Pick a random affirmation that isn’t the same as the last one
+new_affirmation = random.choice(filtered_affirmations)
+while (
+    st.session_state.last_affirmation_id is not None
+    and new_affirmation["id"] == st.session_state.last_affirmation_id
+    and len(filtered_affirmations) > 1
+):
+    new_affirmation = random.choice(filtered_affirmations)
+
+st.session_state.selected_affirmation = new_affirmation
+st.session_state.last_affirmation_id = new_affirmation["id"]
+affirmation = new_affirmation
 
 affirmation = st.session_state.selected_affirmation
 
