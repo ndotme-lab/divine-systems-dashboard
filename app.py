@@ -6,6 +6,10 @@ from io import BytesIO
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
+# --- Initialize session reflections list ---
+if "session_entries" not in st.session_state:
+    st.session_state.session_entries = []
+
 # --- Page setup ---
 st.set_page_config(page_title="🌸 Divine Systems Daily Affirmation", layout="centered")
 
@@ -150,6 +154,11 @@ if st.button("💾 Save & Get New Affirmation"):
         "reflection": reflection,
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
+
+    # Add to session memory
+    st.session_state.session_entries.append(log_entry)
+
+    # Save to file
     with open("affirmation_log.json", "a", encoding="utf-8") as f:
         f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
 
@@ -196,21 +205,59 @@ def create_session_pdf(affirmation, category, alignment, reflection):
     buffer.seek(0)
     return buffer
 
-# --- Optional: Download current session as PDF ---
-st.markdown("### 💾 Optional: Download your session")
-pdf_buffer = create_session_pdf(
-    affirmation["text"],
-    display_category,
-    alignment,
-    reflection
-)
+def create_session_pdf(session_entries):
+    buffer = BytesIO()
+    c = canvas.Canvas(buffer, pagesize=letter)
+    width, height = letter
+    y = height - 80
 
-st.download_button(
-    label="📄 Download Session (.pdf)",
-    data=pdf_buffer,
-    file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
-    mime="application/pdf"
-)
+    c.setFont("Helvetica-Bold", 16)
+    c.drawString(72, y, "🌸 Divine Systems Daily Affirmation Session")
+    y -= 40
+
+    c.setFont("Helvetica", 12)
+    c.drawString(72, y, f"Total entries: {len(session_entries)}")
+    y -= 30
+
+    for i, entry in enumerate(session_entries, 1):
+        c.setFont("Helvetica-Bold", 12)
+        c.drawString(72, y, f"{i}. ✨ {entry['text'][:70]}...")
+        y -= 20
+
+        c.setFont("Helvetica", 11)
+        c.drawString(72, y, f"🏷️ {CATEGORY_DISPLAY.get(entry['category'], entry['category'])}")
+        y -= 15
+        c.drawString(72, y, f"🌿 {entry['alignment']}")
+        y -= 15
+
+        c.drawString(72, y, "🪶 Reflection:")
+        y -= 15
+        text = c.beginText(90, y)
+        text.setFont("Helvetica", 10)
+        text.textLines(entry['reflection'] if entry['reflection'] else "—")
+        c.drawText(text)
+        y -= 80
+
+        if y < 100:  # add new page if near bottom
+            c.showPage()
+            y = height - 80
+
+    c.showPage()
+    c.save()
+    buffer.seek(0)
+    return buffer
+
+if st.session_state.session_entries:
+    st.markdown("### 💾 Download your full session")
+    pdf_buffer = create_session_pdf(st.session_state.session_entries)
+    st.download_button(
+        label="📄 Download Full Session (.pdf)",
+        data=pdf_buffer,
+        file_name=f"affirmation_session_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf",
+        mime="application/pdf"
+    )
+else:
+    st.info("💡 Save at least one affirmation to enable PDF download.")
 
 st.markdown("---")
 st.write("🧩 Current build: v3.3 (PDF download added)")
